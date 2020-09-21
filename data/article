@@ -1,0 +1,42 @@
+Emotional Intelligence for Data Science Teams
+We surveyed and interviewed some of our most successful customers to learn how they align their data science team with their business. The challenges involved are not technical, which is why the solutions may not come easy to data science practitioners and managers.
+
+Here are three lessons for making and demonstrating a greater business impact to your organization, according to our most successful customers:
+
+1. Data Science has Science in the title for a reason.
+    The data science lifecycle is iterative, which means you are constantly learning and trying new things. But more than half of what you try usually doesn't work. This is because it is actually a science, and like any scientific research, you don't know what is going to work until you try it. Therefore you can't place a timeline on it; you must continue experimenting. This is probably why most scientific research is done in a laboratory environment where the research lifecycle is well known and accepted.
+
+When you start to mix this way of working with the fast-paced demands of the business, it can cause friction that prevents the data science team from getting buy-in.
+
+Our most successful customers found ways to blend the concepts of science with business through the way they drive data science projects. Their first advice is to have a clearly defined set of procedures and targets you are going to attempt. This removes the expectation that the project will succeed and puts the focus on achieving agreed upon milestones, no matter if it succeeds or fails.
+
+The second piece of advice is to avoid the common mistake of working left-to-right, i.e. "here's all of our data, what interesting things can we do with it?"
+
+
+Anytime you start with the data it introduces scope creep and leaves no clear way of measuring success. This is a surefire way of gaining a reputation for working on abstract science projects and having the business not understand what you or your team is doing. Always start with the business problem and then move backwards. Ask questions like "what business impact are we trying to have?" "What metric are we trying to move?" "What decision are we trying to affect?" This will inform the data you will need and will also help you clearly define what success looks like and keep stakeholders engaged throughout the process.
+
+2. Emotional intelligence outweighs technical prowess.
+The sexiest part of data science is modeling trying out different algorithms, experimenting with different features, exploring lots of different data. It makes sense that most data scientists want to spend the majority of their time on this piece. Unfortunately, this is not the area that needs the most attentionwhen it comes to aligning data science with the business. All of our most successful customers have talked about this struggle at length. It's time to up your EQ game.
+
+One piece of advice we heard is to work on developing empathy skills. You are working with senior executives to get buy-in for a culture that embraces experimentation. This means getting them comfortable with failing fast and being iterative and not having clear requirements that can be "project managed" to delivery. How do you accomplish this? Be a business person first and a technical person second. Business executives are on the hook for delivering outcomes and coming across as overly technical will make them think you don't understand the business.
+
+Another tip is to be sensitive with how people in the organization have historically made decisions and operated in the past they are the experts in their field and this is how they have made a living. Your job is to help the business make better decisions, not take credit for outcomes. For example, instead of using phrases like "the work from the data science team led to a 20% cost savings for the Sales team," use phrases like "the work from the data science team was associated with finding a 20% cost savings for the Sales team" or "the Sales team and data science team got to a 20% cost savings together."
+
+If you want the business to work with you and leverage the output of your models, it is important to enrich their intuition instead of replace it. Present output and results in a way that they can still make the decision.
+
+3. Measure ROI by using "political capital" as the currency.
+Getting buy-in from the business is critical, especially in the early stages of building a data science team. Chances are that a senior leader has taken a leap of faith to make an investment in building your team and will need to measure the ROI of that investment soon. The projects your team chooses to work on in these early stages can dictate the future success of your team more than you might think.
+
+Think about getting small wins to accumulate political capital in the bank. If you maintain a steady stream of success with small projects that are low risk, you will build enough political capital to "fund" the larger more risky projects. You want to build the dream, but don't do the most complicated thing first. Showing incremental progress will get you the buy-in to take higher risk ventures in the future.
+
+For very early stage teams, the tip we have heard is to measure ROI with political capital from other senior sponsors throughout the organization. Early on it is hard to measure ROI on even the small projects, but you can create runway by making sure stakeholders "feel good" about what you are working on.
+
+The biggest piece of advice is that data science projects should always result in outputs that are recommendations to do something or not do something. Avoid the "hey this is interesting" kind of problem.
+
+If you align your projects to outputs, then they can be measured. Measurement should still take political capital into account because you don't want to take credit for impact that encroaches on a business stakeholder's area of expertise and burns that relationship. Instead, measure projects against one of these five areas of impact:
+
+Driving revenue up
+Driving costs down
+Decreasing risk
+Optimizing the balance sheet
+More efficiently managing human capital
