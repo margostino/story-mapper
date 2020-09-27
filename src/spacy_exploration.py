@@ -2,6 +2,7 @@ from collections import Counter
 
 import neo4j
 import spacy
+from spacy import displacy
 
 host = "neo4j://localhost:7687"
 user = 'neo4j'
@@ -37,7 +38,7 @@ def get_graph_param_for_persons():
     for wi, w in enumerate(ws):
         if not w[:2] == '$$':
             continue
-        x = 14
+        x = 50
         for i in range(wi + 1, wi + x):
             if i >= l:
                 break
@@ -48,7 +49,8 @@ def get_graph_param_for_persons():
     return params_list
 
 
-def store_graph_for_relations(triplets):
+def store_graph_for_relations():
+    triplets = calculate_triplets()
     save_triplets_query = """
         MERGE (p1:Triple{name:$name1})
         MERGE (p2:Triple{name:$name2})
@@ -74,7 +76,8 @@ def delete_all_graphs():
         session.run(delete_query)
 
 
-def store_graph_for_persons(persons):
+def store_graph_for_persons():
+    persons = get_graph_param_for_persons()
     save_person_query = """
         MERGE (p1:Person{name:$name1})
         MERGE (p2:Person{name:$name2})
@@ -229,6 +232,21 @@ def print_ner(key):
         print("ner: ", list(ner.keys())[0], " freq: ", list(ner.values())[0])
 
 
+def print_stats():
+    print("Stats:")
+    print_ner('persons')
+    print_ner('gpes')
+    print_ner('orgs')
+    print_ner('locs')
+    print_ner('works_of_arts')
+    print_ner('laws')
+    print_ner('events')
+    print_ner('products')
+    print_ner('norps')
+    print_ner('facts')
+    print_ner('languages')
+
+
 # Visualize a dependency parse and named entities in the browser
 # displacy.serve(doc, style="dep")
 # displacy.serve(doc, style="ent")
@@ -249,27 +267,12 @@ def print_ner(key):
 
 # ----------------------------------------------------------------------------------------------------------------------
 
-delete_all_graphs()
-
 # Stats
 calculate_ner_stats(doc)
 calculate_similarity(doc)
 # Graphs
-triplets = calculate_triplets()
-persons = get_graph_param_for_persons()
-store_graph_for_persons(persons)
-# store_graph_for_relations(triplets)
+delete_all_graphs()
+store_graph_for_persons()
+# store_graph_for_relations()
+print_stats()
 
-print("Stats:")
-
-print_ner('persons')
-print_ner('gpes')
-print_ner('orgs')
-print_ner('locs')
-print_ner('works_of_arts')
-print_ner('laws')
-print_ner('events')
-print_ner('products')
-print_ner('norps')
-print_ner('facts')
-print_ner('languages')
