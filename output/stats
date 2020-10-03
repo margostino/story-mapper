@@ -1,0 +1,89 @@
+Stats:
+=============== persons ===============
+ner:  Bagginses  freq:  0.61
+ner:  Baggins  freq:  7.27
+ner:  Bilbo Baggins  freq:  4.85
+ner:  Belladonna Took  freq:  0.61
+ner:  Bungo Baggins  freq:  0.61
+ner:  Bilbo  freq:  16.36
+ner:  Gandalf  freq:  18.79
+ner:  Belladonna Took's  freq:  0.61
+ner:  Took  freq:  1.21
+ner:  Belladonna  freq:  0.61
+ner:  Balin  freq:  4.24
+ner:  Kili  freq:  1.82
+ner:  Dori  freq:  1.21
+ner:  Nori  freq:  1.21
+ner:  Ori  freq:  0.61
+ner:  Oin  freq:  0.61
+ner:  Thorin  freq:  19.39
+ner:  Bifur  freq:  1.82
+ner:  Bofur  freq:  2.42
+ner:  Lo  freq:  0.61
+ner:  Fili  freq:  1.21
+ner:  Bilbo Baggins hates-
+                      freq:  0.61
+ner:  the dale
+                     freq:  0.61
+ner:  Hill  freq:  0.61
+ner:  Gloin  freq:  0.61
+ner:  Bullroarer Took  freq:  0.61
+ner:  Treasure-hunter  freq:  0.61
+ner:  Thror  freq:  1.21
+ner:  Heath  freq:  0.61
+ner:  Smaug  freq:  1.82
+ner:  Dale  freq:  4.85
+ner:  Thrain the Old  freq:  0.61
+ner:  Tookishness  freq:  0.61
+=============== gpes ===============
+ner:  Bungo  freq:  20.00
+ner:  Bifur  freq:  40.00
+ner:  Bofur  freq:  20.00
+ner:  Thorin  freq:  20.00
+=============== orgs ===============
+ner:  Dwarves  freq:  5.26
+ner:  Took  freq:  21.05
+ner:  hobbit  freq:  5.26
+ner:  Gloin  freq:  15.79
+ner:  Bombur  freq:  10.53
+ner:  Bullroarer's  freq:  5.26
+ner:  Mirkwood  freq:  5.26
+ner:  the Lower Halls  freq:  5.26
+ner:  Azog the Goblin  freq:  5.26
+ner:  Moria  freq:  10.53
+ner:  Necromancer  freq:  10.53
+=============== locs ===============
+ner:  The   Hill  freq:  6.25
+ner:  the East of East  freq:  6.25
+ner:  the Last Desert  freq:  6.25
+ner:  West  freq:  6.25
+ner:  East  freq:  18.75
+ner:  the Long Lake  freq:  12.50
+ner:  valley  freq:  6.25
+ner:  Mountain  freq:  12.50
+ner:  Running     River  freq:  6.25
+ner:  North  freq:  18.75
+=============== works_of_arts ===============
+ner:  Belladonna Took  freq:  9.09
+ner:  The Water  freq:  18.18
+ner:  Old Took  freq:  9.09
+ner:  Engagement Tablet  freq:  9.09
+ner:  Dwalin  freq:  36.36
+ner:  Hush  freq:  9.09
+ner:  Old Took's  freq:  9.09
+=============== laws ===============
+=============== events ===============
+ner:  the Country Round  freq:  100.00
+=============== products ===============
+ner:  hobbit  freq:  83.33
+ner:  Dwalin  freq:  16.67
+=============== norps ===============
+ner:  Dwalin  freq:  100.00
+=============== facts ===============
+ner:  Bombur  freq:  42.86
+ner:  the River Running  freq:  14.29
+ner:  the Front Gate  freq:  14.29
+ner:  the Front   Gate     freq:  14.29
+ner:  Moria  freq:  14.29
+=============== languages ===============
+ner:  Tookish  freq:  100.00

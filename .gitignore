@@ -1,7 +1,7 @@
 *.iml
 .idea/
 logs/
-data/neo4j
+data/*
 .DS_Store
 __init__.py
 *.pb

@@ -10,7 +10,8 @@ password = 'test'
 
 driver = neo4j.GraphDatabase.driver(host)
 nlp = spacy.load("en_core_web_lg")
-f = open('../data/sherlock-holmes-adventure-1', 'r')
+# f = open('../data/sherlock-holmes-adventure-1', 'r')
+f = open('../data/the-hobbit-chapter-1', 'r')
 text_content = f.read()
 doc = nlp(text_content)
 stats = {}
@@ -25,7 +26,7 @@ def calculate_triplets():
 
 
 def get_graph_param_for_persons():
-    params_list = []
+    persons = []
     involved = list(set([ent.text for ent in doc.ents if ent.label_ == 'PERSON']))
     decode = dict()
     text = text_content
@@ -44,9 +45,9 @@ def get_graph_param_for_persons():
                 break
             if not ws[i][:2] == '$$':
                 continue
-            params_list.append({'name1': decode[ws[wi]], 'name2': decode[ws[i]]})
+            persons.append({'name1': decode[ws[wi]], 'name2': decode[ws[i]]})
 
-    return params_list
+    return get_affinity_persons([v for v in persons if v['name1']!=v['name2']])
 
 
 def store_graph_for_relations():
@@ -81,14 +82,28 @@ def store_graph_for_persons():
     save_person_query = """
         MERGE (p1:Person{name:$name1})
         MERGE (p2:Person{name:$name2})
-        MERGE (p1)-[r:RELATED]-(p2)
+        MERGE (p1)-[r:relation]-(p2)
         ON CREATE SET r.score = 1
         ON MATCH SET r.score = r.score + 1"""
 
     constraint_person_query = "CREATE CONSTRAINT ON (p:Person) ASSERT p.name IS UNIQUE;"
     with driver.session() as session:
         for params in persons:
-            session.run(save_person_query, params)
+            relation = 'affinity_' + str(int(round(params['affinity'] * 100, 0)))
+            session.run(save_person_query.replace("relation", relation), params)
+
+
+def get_affinity_persons(persons):
+    result = []
+    for person in persons:
+        sublist_by = [p for p in persons if p['name1'] == person['name1']]
+        total = len(sublist_by)
+        partial = len([a for a in persons if (a['name1'] == person['name1'] and a['name2'] == person['name2'])])
+
+        if (person not in result) and (person['name1'] != person['name2']) and ({'name1': person['name2'], 'name2': person['name1']} not in result):
+            result.append({'name1': person['name1'], 'name2': person['name2'], 'affinity': partial/total})
+
+    return result
 
 
 def calculate_ner_stats(doc):
